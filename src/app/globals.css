@@ -2,160 +2,153 @@
 
 @layer base {
   :root {
-    --bg-main: #0b0f19;
-    --bg-card: rgba(17, 24, 39, 0.75);
-    --bg-card-hover: rgba(31, 41, 55, 0.85);
-    --border-card: rgba(255, 255, 255, 0.08);
-    --border-glow: rgba(99, 102, 241, 0.4);
+    --bg-main-light: #f8fafc;
+    --bg-card-light: #ffffff;
+    --border-light: #e2e8f0;
+    --text-primary-light: #0f172a;
+    --text-secondary-light: #475569;
+    --text-muted-light: #64748b;
     
-    --primary: #6366f1;
-    --primary-hover: #4f46e5;
-    --primary-light: rgba(99, 102, 241, 0.15);
+    --primary-indigo: #4f46e5;
+    --primary-indigo-hover: #4338ca;
+    --primary-indigo-light: #e0e7ff;
     
-    --accent-cyan: #06b6d4;
-    --accent-emerald: #10b981;
-    --accent-rose: #f43f5e;
-    --accent-amber: #f59e0b;
-    
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
+    --accent-emerald: #059669;
+    --accent-rose: #e11d48;
+    --accent-amber: #d97706;
   }
 
   body {
-    background-color: var(--bg-main);
-    color: var(--text-primary);
+    background-color: var(--bg-main-light);
+    color: var(--text-primary-light);
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
-/* Glassmorphism Card Utility */
-.glass-card {
-  background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-card);
-  border-radius: 1rem;
+/* Sleek Light Glassmorphism Card Utility */
+.light-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.glass-card:hover {
-  border-color: rgba(99, 102, 241, 0.3);
-  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.15);
+.light-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 30px -8px rgba(79, 70, 229, 0.12);
 }
 
-.glass-modal {
-  background: rgba(15, 23, 42, 0.92);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+.light-modal {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
 }
 
-/* Glow Badges */
-.badge-indigo {
-  background: rgba(99, 102, 241, 0.12);
-  color: #818cf8;
-  border: 1px solid rgba(99, 102, 241, 0.25);
+/* Light Theme Badges */
+.badge-light-indigo {
+  background: #e0e7ff;
+  color: #3730a3;
+  border: 1px solid #c7d2fe;
 }
 
-.badge-emerald {
-  background: rgba(16, 185, 129, 0.12);
-  color: #34d399;
-  border: 1px solid rgba(16, 185, 129, 0.25);
+.badge-light-emerald {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
 }
 
-.badge-rose {
-  background: rgba(244, 63, 94, 0.12);
-  color: #fb7185;
-  border: 1px solid rgba(244, 63, 94, 0.25);
+.badge-light-rose {
+  background: #ffe4e6;
+  color: #9f1239;
+  border: 1px solid #fecdd3;
 }
 
-.badge-amber {
-  background: rgba(245, 158, 11, 0.12);
-  color: #fbbf24;
-  border: 1px solid rgba(245, 158, 11, 0.25);
+.badge-light-amber {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
 }
 
 /* Custom Scrollbars */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(15, 23, 42, 0.6);
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.3);
+  background: #cbd5e1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(99, 102, 241, 0.6);
+  background: #94a3b8;
 }
 
-/* Rich Text / CKEditor Render Formatting */
-.rich-content {
-  color: #cbd5e1;
-  line-height: 1.7;
+/* Rich Text / CKEditor Light Mode Formatting */
+.rich-content-light {
+  color: #334155;
+  line-height: 1.75;
 }
 
-.rich-content h1, .rich-content h2, .rich-content h3, .rich-content h4 {
-  color: #f8fafc;
+.rich-content-light h1,
+.rich-content-light h2,
+.rich-content-light h3,
+.rich-content-light h4 {
+  color: #0f172a;
   font-weight: 700;
   margin-top: 1.25rem;
   margin-bottom: 0.75rem;
+  line-height: 1.3;
 }
 
-.rich-content h1 { font-size: 1.5rem; }
-.rich-content h2 { font-size: 1.3rem; }
-.rich-content h3 { font-size: 1.15rem; }
-.rich-content h4 { font-size: 1.05rem; }
+.rich-content-light h1 { font-size: 1.4rem; }
+.rich-content-light h2 { font-size: 1.25rem; }
+.rich-content-light h3 { font-size: 1.1rem; }
+.rich-content-light h4 { font-size: 1.0rem; }
 
-.rich-content p {
-  margin-bottom: 1rem;
+.rich-content-light p {
+  margin-bottom: 0.85rem;
 }
 
-.rich-content ul, .rich-content ol {
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
+.rich-content-light ul,
+.rich-content-light ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0.85rem;
 }
 
-.rich-content ul { list-style-type: disc; }
-.rich-content ol { list-style-type: decimal; }
+.rich-content-light ul { list-style-type: disc; }
+.rich-content-light ol { list-style-type: decimal; }
 
-.rich-content li {
-  margin-bottom: 0.35rem;
+.rich-content-light li {
+  margin-bottom: 0.3rem;
 }
 
-.rich-content strong {
-  color: #f1f5f9;
+.rich-content-light strong {
+  color: #0f172a;
 }
 
-.rich-content blockquote {
-  border-left: 3px solid var(--primary);
+.rich-content-light blockquote {
+  border-left: 4px solid var(--primary-indigo);
   padding-left: 1rem;
   font-style: italic;
-  color: #94a3b8;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 0.75rem 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
   margin-bottom: 1rem;
 }
 
-/* Pulse Glow Animation */
-@keyframes pulse-glow {
-  0%, 100% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.05);
-  }
-}
-
-.pulse-glow {
-  animation: pulse-glow 4s ease-in-out infinite;
+/* Mobile Responsiveness & Touch Utilities */
+@media (max-width: 640px) {
+  .rich-content-light h1 { font-size: 1.25rem; }
+  .rich-content-light h2 { font-size: 1.15rem; }
+  .rich-content-light h3 { font-size: 1.05rem; }
 }
