@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="light">
       <head>
         <meta name="google-site-verification" content="mu5C37k-8Wp8f67Oc4Z92ocMwyxcWFLE0MFRst1J3yA" />
         <meta name="google-adsense-account" content="ca-pub-7118174569250883" />
@@ -40,7 +40,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body className="min-h-screen bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
+      <body className="min-h-screen bg-[#faf6f0] text-slate-900 antialiased selection:bg-amber-600 selection:text-white">
         {children}
       </body>
     </html>

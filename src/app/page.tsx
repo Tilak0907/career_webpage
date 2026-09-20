@@ -34,7 +34,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-950 text-slate-100 selection:bg-indigo-500 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#faf6f0] text-slate-900 selection:bg-amber-600 selection:text-white">
       {/* Public Header without Visitor Count */}
       <Header
         searchQuery={searchQuery}
